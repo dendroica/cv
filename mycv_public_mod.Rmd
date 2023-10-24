@@ -11,8 +11,9 @@ linkedin: gorzo
 date: "`r format(Sys.time(), '%B %Y')`"
 output:
   vitae::cv_document:
-    latex_engine: "xelatex" # It is important to specify this
-    template: awesome-cv_mod.tex
+    latex_engine: xelatex # Specify so it uses this instead of pdflatex
+    keep_tex: TRUE # Keep tex file in-between runs
+    template: mycv_public_mod.tex 
 csl: apa-single-spaced_mod.csl
 ---
 
@@ -82,5 +83,5 @@ Updated code for Supplement 1. R Script in 2016 for the publication: Jackson, M.
 Contributed “Raptors and songbirds” (8.4.5.1) pp.565-566 in Jodice, P. G. R., Tavano, J., Mackin, W., & Michel, J. (2013). South Atlantic information resources: data search and literature synthesis. US Department of the Interior, Bureau of Ocean Energy Management, regulation, and enforcement, Gulf of Mexico OCS region, 475, 587
 
 # Outreach, Service & Fundraising
-* Cape May Fall Festival: Volunteer field guide (2023)
+* Birding field guide (paid and volunteer) for various festivals (2015-2023)
 * World Series of Birding: Participant in Carbon Footprint Challenge (2015, 2021)

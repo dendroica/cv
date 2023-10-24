@@ -1,0 +1,317 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt,a4paper,]{awesome-cv}
+
+% Configure page margins with geometry
+\usepackage{geometry}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\colorlet{awesome}{awesome-emerald}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\name{Jessica}{Gorzo}
+
+\position{Data Scientist}
+\address{Cellular Tracking Technologies}
+
+\pronouns{she/her}
+\homepage{avianecologist.com}
+\github{dendroica}
+\linkedin{gorzo}
+\twitter{setophaga}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{2em}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\honortitlestyle{#1}}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\honordatestyle{#1}}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {October 2023}
+    {Jessica Gorzo~~~·~~~Curriculum Vitae}
+  {\thepage~ of \pageref{LastPage}~}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\hypertarget{recent-experience}{%
+\section{Recent Experience}\label{recent-experience}}
+
+\begin{cventries}
+    \cventry{Data scientist}{Cellular Tracking Technologies}{Rio Grande, NJ}{Jul. 2020 - Present}{\begin{cvitems}
+\item Develop methodology to estimate locations from radio and Bluetooth signals from wildlife telemetry devices
+\item Manage data pipelines and processes that deliver and display data via web interfaces
+\end{cvitems}}
+    \cventry{Co-Founder}{On the Wing Scientific Consulting LLC}{Remote}{Jul. 2018 - Present}{\begin{cvitems}
+\item Data science consulting projects including spatio-temporal modeling
+\item Create tools for improving workflows
+\end{cvitems}}
+    \cventry{Researcher}{Natural Resources Research Institute}{Duluth, MN}{Aug. 2016 - Jun. 2020}{\begin{cvitems}
+\item Landscape Ecologist
+\end{cvitems}}
+\end{cventries}
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+\begin{cventries}
+    \cventry{B.S. Biological Sciences}{Virginia Tech}{Blacksburg, VA}{2004-08}{}\vspace{-4.0mm}
+    \cventry{M.S. Wildlife \& Fisheries Biology}{Clemson University}{Clemson, SC}{2009-11}{}\vspace{-4.0mm}
+    \cventry{Ph.D. Wildlife Ecology}{University of Wisconsin}{Madison, WI}{2012-16}{}\vspace{-4.0mm}
+\end{cventries}
+
+\hypertarget{thesis-dissertation}{%
+\section{Thesis \& Dissertation}\label{thesis-dissertation}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-gorzo2016avian}{}}%
+Gorzo, J. M. (2016). \emph{Avian Response to Weather in the Central US
+Grasslands} {[}PhD thesis{]}. The University of Wisconsin-Madison.
+
+\leavevmode\vadjust pre{\hypertarget{ref-gorzo2012avian}{}}%
+Gorzo, J. M. (2012). \emph{Avian communities and landscape
+characteristics of golf courses within the Beaufort County sea island
+complex} {[}Master's thesis{]}. Clemson University.
+
+\hypertarget{peer-reviewed-publications}{%
+\section{Peer-Reviewed Publications}\label{peer-reviewed-publications}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-gorzo2016using}{}}%
+Gorzo, J. M., Pidgeon, A. M., Thogmartin, W. E., Allstadt, A. J.,
+Radeloff, V. C., Heglund, P. J., \& Vavrus, S. J. (2016). Using the
+North American Breeding Bird Survey to assess broad-scale response of
+the continent's most imperiled avian community, grassland birds, to
+weather variability. \emph{The Condor: Ornithological Applications},
+\emph{118}(3), 502--512.
+
+\leavevmode\vadjust pre{\hypertarget{ref-schilke2020modeling}{}}%
+Schilke, P. R., Bartrons, M., Gorzo, J. M., Vander Zanden, M. J.,
+Gratton, C., Howe, R. W., \& Pidgeon, A. M. (2020). Modeling a
+cross-ecosystem subsidy: Forest songbird response to emergent aquatic
+insects. \emph{Landscape Ecology}, \emph{35}, 1587--1604.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mcintyre2019simulating}{}}%
+McIntyre, N., Liu, G., Gorzo, J. M., Wright, C. K., Guntenspergen, G.
+R., \& Schwartz, F. (2019). Simulating the effects of climate
+variability on waterbodies and wetland-dependent birds in the Prairie
+Pothole Region. \emph{Ecosphere}, \emph{10}(4), e02711.
+
+\leavevmode\vadjust pre{\hypertarget{ref-hamilton2018slow}{}}%
+Hamilton, C. M., Bateman, B. L., Gorzo, J. M., Reid, B., Thogmartin, W.
+E., Peery, M. Z., Heglund, P. J., Radeloff, V. C., \& Pidgeon, A. M.
+(2018). Slow and steady wins the race? Future climate and land use
+change leaves the imperiled Blanding's turtle (Emydoidea blandingii)
+behind. \emph{Biological Conservation}, \emph{222}, 75--85.
+
+\leavevmode\vadjust pre{\hypertarget{ref-latimer2022rising}{}}%
+Latimer, C. E., Graves, R., Pidgeon, A. M., Gorzo, J. M., Henschell, M.
+M., Schilke, P. R., Hobi, M. L., Olah, A., Kennedy, C. M., Zuckerberg,
+B., et al. (2022). Rising novelty and homogenization of breeding bird
+communities in the US. \emph{bioRxiv}, 2022--2009.
+
+\leavevmode\vadjust pre{\hypertarget{ref-simonetti2008minor}{}}%
+Simonetti, J., Chou, A., Dowd, J., Gorzo, J., Grimm, C., Harold, M.,
+Hubbard, R., Kuether, T., Loyd, R., Nipper, B., et al. (2008). Minor
+planet observations {[}841 martin observatory, blacksburg{]}.
+\emph{Minor Planet Circulars}, \emph{62871}, 9.
+
+\hypertarget{conference-presentations}{%
+\section{Conference Presentations}\label{conference-presentations}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-jess2018mallard}{}}%
+Gorzo, J. M., \& Wright, C. K. (2018). Mallard Distribution and Wetland
+Network Modularity in the Prairie Pothole Region (PPR). \emph{IALE-NA},
+\emph{T02}, Terrestrial--aquatic ecosystem interactions.
+
+\leavevmode\vadjust pre{\hypertarget{ref-tag}{}}%
+Gorzo, J. M. (2017a). Waterfowl response to weather and land cover in
+the prairie potholes. \emph{Proceedings of the Ninety-Eighth Annual
+Meeting}, 922. \url{https://doi.org/10.1676/1559-4491-129.4.911}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tag3}{}}%
+Gorzo, J. M. (2017b). Waterfowl response to weather and land cover in
+the prairie potholes. \emph{Proceedings of the Ninety-Eighth Annual
+Meeting}, 922. \url{https://doi.org/10.1676/1559-4491-129.4.911}
+
+\leavevmode\vadjust pre{\hypertarget{ref-tag2}{}}%
+Gorzo, J. M., Pidgeon, A., Allstadt, A., Thogmartin, W., Vavrus, S., \&
+Heglund, P. (2016). Land cover and weather drivers of avian site
+fidelity. \emph{Proceedings of the Society for Conservation Biology}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-wright2018mallard}{}}%
+Wright, C. K., \& Gorzo, J. M. (2018). For mallard ducks, the network is
+the habitat. \emph{AGU Fall Meeting Abstracts}, \emph{2018}, H21L--1826.
+
+\leavevmode\vadjust pre{\hypertarget{ref-aou}{}}%
+Gorzo, J. M., Pidgeon, A. M., Thogmartin, W., Allstadt, A., \& Radeloff,
+V. (2015). Grassland bird response to weather in the badlands and
+prairies. \emph{Meeting of the American Ornithologists' Union/Cooper
+Society}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-earth}{}}%
+Gorzo, J. M. (2014). Avian population response to extreme weather
+events. \emph{Nelson Earth Day Conference}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-aoufl}{}}%
+Gorzo, J. M., \& Jodice, P. G. R. (2011). The breeding bird community of
+coastal golf courses in beaufort county, south carolina. \emph{Meeting
+of the American Ornithologists' Union}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-wos}{}}%
+Bateman, B., Gorzo, J. M., Pidgeon, A., Radeloff, V., Akcakaya, R.,
+Flather, C., Albright, T., Vavrus, S., Thogmartin, W., \& Heglund, P.
+(2013). Use of multiple data sources in identifying drivers of abundance
+in an irruptive species, the dickcissel. \emph{Meeting of the American
+Ornithologists' Union/Cooper Ornithological Society}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-allstadt2016effects}{}}%
+Allstadt, A. J., Gorzo, J. M., Bateman, B. L., Heglund, P. J., Pidgeon,
+A. M., Thogmartin, W., Vavrus, S. J., \& Radeloff, V. (2016). Effects of
+weather on the abundance and distribution on populations of 103 breeding
+bird species across the United States. \emph{AGU Fall Meeting
+Abstracts}, \emph{2016}, GC11D--1181.
+
+\hypertarget{technical-reports}{%
+\section{Technical Reports}\label{technical-reports}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-noe2021measuring}{}}%
+Noe, R., Locke, C., Host, G., Gorzo, J., Johnson, L., Lonsdorf, E.,
+Grinde, A., Joyce, M., Bednar, J., Dumke, J., et al. (2021).
+\emph{Measuring what matters: Assessing the full suite of benefits of
+OHF investments}.
+
+\leavevmode\vadjust pre{\hypertarget{ref-CitekeyTechreport}{}}%
+Johnson-Bice, S., Gorzo, J. M., Kovalenko, K., Brown, T., \& Host, G.
+(2020). \emph{Predicting potential beaver dam sites on lake superior's
+north shore}. Natural Resources Research Institute.
+
+\hypertarget{contributions}{%
+\section{Contributions}\label{contributions}}
+
+StellaR: \url{http://www.r-gis.net/stellar/}
+
+Updated code for Supplement 1. R Script in 2016 for the publication:
+Jackson, M. M., Turner, M. G., Pearson, S. M., \& Ives, A. R. (2012).
+Seeing the forest and the trees: multilevel models reveal both species
+and community patterns. Ecosphere, 3(9), 1-16.
+\url{https://figshare.com/articles/dataset/Supplement_1_R_script_and_input_data_file_for_creating_multilevel_models_using_the_forest_herb_data_set_described_in_the_main_text_/3563784?file=5637069}
+
+Contributed ``Raptors and songbirds'' (8.4.5.1) pp.565-566 in Jodice, P.
+G. R., Tavano, J., Mackin, W., \& Michel, J. (2013). South Atlantic
+information resources: data search and literature synthesis. US
+Department of the Interior, Bureau of Ocean Energy Management,
+regulation, and enforcement, Gulf of Mexico OCS region, 475, 587
+
+\hypertarget{outreach-service-fundraising}{%
+\section{Outreach, Service \&
+Fundraising}\label{outreach-service-fundraising}}
+
+\begin{itemize}
+\tightlist
+\item
+  Birding field guide (paid and volunteer) for various festivals
+  (2015-2023)
+\item
+  World Series of Birding: Participant in Carbon Footprint Challenge
+  (2015, 2021)
+\end{itemize}
+
+
+\label{LastPage}~
+\end{document}
