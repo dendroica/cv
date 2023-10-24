@@ -13,7 +13,7 @@ output:
   vitae::cv_document:
     latex_engine: xelatex # Specify so it uses this instead of pdflatex
     keep_tex: TRUE # Keep tex file in-between runs
-    template: mycv_public_mod.tex 
+    template: awesome-cv_mod.tex 
 csl: apa-single-spaced_mod.csl
 ---
 
