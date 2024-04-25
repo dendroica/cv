@@ -34,7 +34,7 @@
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
 
-\colorlet{awesome}{awesome-emerald}
+\colorlet{awesome}{awesome-red}
 
 % Colors for text
 % Uncomment if you would like to specify your own color
@@ -84,25 +84,38 @@
 
 
 % Pandoc CSL macros
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{2em}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
   % turn on hanging indent if param 1 is 1
-  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
-  % set entry spacing
-  \ifnum #2 > 0
-  \setlength{\parskip}{#2\baselineskip}
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
   \fi
- }%
- {}
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
 \usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\honortitlestyle{#1}}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\honordatestyle{#1}}}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \begin{document}
@@ -115,9 +128,9 @@
 % Leave any of these blank if they are not needed
 % 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
 \makecvfooter
-  {October 2023}
+  {April 2024}
     {Jessica Gorzo~~~·~~~Curriculum Vitae}
-  {\thepage~ of \pageref{LastPage}~}
+  {\thepage}
 
 
 %-------------------------------------------------------------------------------
@@ -127,11 +140,13 @@
 
 
 
-\hypertarget{recent-experience}{%
-\section{Recent Experience}\label{recent-experience}}
+\section{Recent Experience}\label{recent-experience}
 
 \begin{cventries}
-    \cventry{Data scientist}{Cellular Tracking Technologies}{Rio Grande, NJ}{Jul. 2020 - Present}{\begin{cvitems}
+    \cventry{Research associate}{Conservation Science Global, Inc.}{Remote}{Mar. 2024 - Present}{\begin{cvitems}
+\item Data wrangling and ecological analysis
+\end{cvitems}}
+    \cventry{Data scientist}{Cellular Tracking Technologies LLC}{Rio Grande, NJ}{Jul. 2020 - Present}{\begin{cvitems}
 \item Develop methodology to estimate locations from radio and Bluetooth signals from wildlife telemetry devices
 \item Manage data pipelines and processes that deliver and display data via web interfaces
 \end{cvitems}}
@@ -144,8 +159,7 @@
 \end{cvitems}}
 \end{cventries}
 
-\hypertarget{education}{%
-\section{Education}\label{education}}
+\section{Education}\label{education}
 
 \begin{cventries}
     \cventry{B.S. Biological Sciences}{Virginia Tech}{Blacksburg, VA}{2004-08}{}\vspace{-4.0mm}
@@ -153,24 +167,26 @@
     \cventry{Ph.D. Wildlife Ecology}{University of Wisconsin}{Madison, WI}{2012-16}{}\vspace{-4.0mm}
 \end{cventries}
 
-\hypertarget{thesis-dissertation}{%
-\section{Thesis \& Dissertation}\label{thesis-dissertation}}
+\section{Thesis \& Dissertation}\label{thesis-dissertation}
 
-\hypertarget{bibliography}{}
-\leavevmode\vadjust pre{\hypertarget{ref-gorzo2016avian}{}}%
+\phantomsection\label{refs-8828c09bf6a8cf10f1ef4c5ed69323d1}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-gorzo2016avian}
 Gorzo, J. M. (2016). \emph{Avian Response to Weather in the Central US
 Grasslands} {[}PhD thesis{]}. The University of Wisconsin-Madison.
 
-\leavevmode\vadjust pre{\hypertarget{ref-gorzo2012avian}{}}%
+\bibitem[\citeproctext]{ref-gorzo2012avian}
 Gorzo, J. M. (2012). \emph{Avian communities and landscape
 characteristics of golf courses within the Beaufort County sea island
 complex} {[}Master's thesis{]}. Clemson University.
 
-\hypertarget{peer-reviewed-publications}{%
-\section{Peer-Reviewed Publications}\label{peer-reviewed-publications}}
+\end{CSLReferences}
 
-\hypertarget{bibliography}{}
-\leavevmode\vadjust pre{\hypertarget{ref-gorzo2016using}{}}%
+\section{Peer-Reviewed Publications}\label{peer-reviewed-publications}
+
+\phantomsection\label{refs-ac9b1bd4beeebee61ed7fb33c33f685f}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-gorzo2016using}
 Gorzo, J. M., Pidgeon, A. M., Thogmartin, W. E., Allstadt, A. J.,
 Radeloff, V. C., Heglund, P. J., \& Vavrus, S. J. (2016). Using the
 North American Breeding Bird Survey to assess broad-scale response of
@@ -178,111 +194,111 @@ the continent's most imperiled avian community, grassland birds, to
 weather variability. \emph{The Condor: Ornithological Applications},
 \emph{118}(3), 502--512.
 
-\leavevmode\vadjust pre{\hypertarget{ref-schilke2020modeling}{}}%
+\bibitem[\citeproctext]{ref-schilke2020modeling}
 Schilke, P. R., Bartrons, M., Gorzo, J. M., Vander Zanden, M. J.,
 Gratton, C., Howe, R. W., \& Pidgeon, A. M. (2020). Modeling a
 cross-ecosystem subsidy: Forest songbird response to emergent aquatic
 insects. \emph{Landscape Ecology}, \emph{35}, 1587--1604.
 
-\leavevmode\vadjust pre{\hypertarget{ref-mcintyre2019simulating}{}}%
+\bibitem[\citeproctext]{ref-mcintyre2019simulating}
 McIntyre, N., Liu, G., Gorzo, J. M., Wright, C. K., Guntenspergen, G.
 R., \& Schwartz, F. (2019). Simulating the effects of climate
 variability on waterbodies and wetland-dependent birds in the Prairie
 Pothole Region. \emph{Ecosphere}, \emph{10}(4), e02711.
 
-\leavevmode\vadjust pre{\hypertarget{ref-hamilton2018slow}{}}%
+\bibitem[\citeproctext]{ref-hamilton2018slow}
 Hamilton, C. M., Bateman, B. L., Gorzo, J. M., Reid, B., Thogmartin, W.
 E., Peery, M. Z., Heglund, P. J., Radeloff, V. C., \& Pidgeon, A. M.
 (2018). Slow and steady wins the race? Future climate and land use
 change leaves the imperiled Blanding's turtle (Emydoidea blandingii)
 behind. \emph{Biological Conservation}, \emph{222}, 75--85.
 
-\leavevmode\vadjust pre{\hypertarget{ref-latimer2022rising}{}}%
+\bibitem[\citeproctext]{ref-latimer2022rising}
 Latimer, C. E., Graves, R., Pidgeon, A. M., Gorzo, J. M., Henschell, M.
 M., Schilke, P. R., Hobi, M. L., Olah, A., Kennedy, C. M., Zuckerberg,
 B., et al. (2022). Rising novelty and homogenization of breeding bird
 communities in the US. \emph{bioRxiv}, 2022--2009.
 
-\leavevmode\vadjust pre{\hypertarget{ref-simonetti2008minor}{}}%
+\bibitem[\citeproctext]{ref-simonetti2008minor}
 Simonetti, J., Chou, A., Dowd, J., Gorzo, J., Grimm, C., Harold, M.,
 Hubbard, R., Kuether, T., Loyd, R., Nipper, B., et al. (2008). Minor
-planet observations {[}841 martin observatory, blacksburg{]}.
+Planet Observations {[}841 Martin Observatory, Blacksburg{]}.
 \emph{Minor Planet Circulars}, \emph{62871}, 9.
 
-\hypertarget{conference-presentations}{%
-\section{Conference Presentations}\label{conference-presentations}}
+\end{CSLReferences}
 
-\hypertarget{bibliography}{}
-\leavevmode\vadjust pre{\hypertarget{ref-jess2018mallard}{}}%
+\section{Conference Presentations}\label{conference-presentations}
+
+\phantomsection\label{refs-991d93bd90cb12ba09bf79627ab84edc}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-jess2018mallard}
 Gorzo, J. M., \& Wright, C. K. (2018). Mallard Distribution and Wetland
 Network Modularity in the Prairie Pothole Region (PPR). \emph{IALE-NA},
 \emph{T02}, Terrestrial--aquatic ecosystem interactions.
 
-\leavevmode\vadjust pre{\hypertarget{ref-tag}{}}%
-Gorzo, J. M. (2017a). Waterfowl response to weather and land cover in
-the prairie potholes. \emph{Proceedings of the Ninety-Eighth Annual
+\bibitem[\citeproctext]{ref-tag}
+Gorzo, J. M. (2017). Waterfowl response to weather and land cover in the
+prairie potholes. \emph{Proceedings of the Ninety-Eighth Annual
 Meeting}, 922. \url{https://doi.org/10.1676/1559-4491-129.4.911}
 
-\leavevmode\vadjust pre{\hypertarget{ref-tag3}{}}%
-Gorzo, J. M. (2017b). Waterfowl response to weather and land cover in
-the prairie potholes. \emph{Proceedings of the Ninety-Eighth Annual
-Meeting}, 922. \url{https://doi.org/10.1676/1559-4491-129.4.911}
-
-\leavevmode\vadjust pre{\hypertarget{ref-tag2}{}}%
+\bibitem[\citeproctext]{ref-tag2}
 Gorzo, J. M., Pidgeon, A., Allstadt, A., Thogmartin, W., Vavrus, S., \&
 Heglund, P. (2016). Land cover and weather drivers of avian site
 fidelity. \emph{Proceedings of the Society for Conservation Biology}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-wright2018mallard}{}}%
+\bibitem[\citeproctext]{ref-wright2018mallard}
 Wright, C. K., \& Gorzo, J. M. (2018). For mallard ducks, the network is
 the habitat. \emph{AGU Fall Meeting Abstracts}, \emph{2018}, H21L--1826.
 
-\leavevmode\vadjust pre{\hypertarget{ref-aou}{}}%
+\bibitem[\citeproctext]{ref-aou}
 Gorzo, J. M., Pidgeon, A. M., Thogmartin, W., Allstadt, A., \& Radeloff,
 V. (2015). Grassland bird response to weather in the badlands and
 prairies. \emph{Meeting of the American Ornithologists' Union/Cooper
 Society}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-earth}{}}%
+\bibitem[\citeproctext]{ref-earth}
 Gorzo, J. M. (2014). Avian population response to extreme weather
 events. \emph{Nelson Earth Day Conference}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-aoufl}{}}%
+\bibitem[\citeproctext]{ref-aoufl}
 Gorzo, J. M., \& Jodice, P. G. R. (2011). The breeding bird community of
-coastal golf courses in beaufort county, south carolina. \emph{Meeting
+coastal golf courses in Beaufort County, South Carolina. \emph{Meeting
 of the American Ornithologists' Union}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-wos}{}}%
+\bibitem[\citeproctext]{ref-wos}
 Bateman, B., Gorzo, J. M., Pidgeon, A., Radeloff, V., Akcakaya, R.,
 Flather, C., Albright, T., Vavrus, S., Thogmartin, W., \& Heglund, P.
 (2013). Use of multiple data sources in identifying drivers of abundance
 in an irruptive species, the dickcissel. \emph{Meeting of the American
 Ornithologists' Union/Cooper Ornithological Society}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-allstadt2016effects}{}}%
+\bibitem[\citeproctext]{ref-allstadt2016effects}
 Allstadt, A. J., Gorzo, J. M., Bateman, B. L., Heglund, P. J., Pidgeon,
 A. M., Thogmartin, W., Vavrus, S. J., \& Radeloff, V. (2016). Effects of
 weather on the abundance and distribution on populations of 103 breeding
 bird species across the United States. \emph{AGU Fall Meeting
 Abstracts}, \emph{2016}, GC11D--1181.
 
-\hypertarget{technical-reports}{%
-\section{Technical Reports}\label{technical-reports}}
+\end{CSLReferences}
 
-\hypertarget{bibliography}{}
-\leavevmode\vadjust pre{\hypertarget{ref-noe2021measuring}{}}%
+\section{Technical Reports}\label{technical-reports}
+
+\phantomsection\label{refs-972c61dc0a31e77772ca1bd1a185967e}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-noe2021measuring}
 Noe, R., Locke, C., Host, G., Gorzo, J., Johnson, L., Lonsdorf, E.,
 Grinde, A., Joyce, M., Bednar, J., Dumke, J., et al. (2021).
 \emph{Measuring what matters: Assessing the full suite of benefits of
 OHF investments}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-CitekeyTechreport}{}}%
+\bibitem[\citeproctext]{ref-CitekeyTechreport}
 Johnson-Bice, S., Gorzo, J. M., Kovalenko, K., Brown, T., \& Host, G.
-(2020). \emph{Predicting potential beaver dam sites on lake superior's
-north shore}. Natural Resources Research Institute.
+(2020). \emph{Predicting Potential Beaver Dam Sites on Lake Superior's
+North Shore}. Natural Resources Research Institute.
 
-\hypertarget{contributions}{%
-\section{Contributions}\label{contributions}}
+\end{CSLReferences}
+
+\section{Contributions}\label{contributions}
 
 StellaR: \url{http://www.r-gis.net/stellar/}
 
@@ -298,9 +314,19 @@ information resources: data search and literature synthesis. US
 Department of the Interior, Bureau of Ocean Energy Management,
 regulation, and enforcement, Gulf of Mexico OCS region, 475, 587
 
-\hypertarget{outreach-service-fundraising}{%
+\section{Teaching}\label{teaching}
+
+\subsection{Selected Invited Seminars}\label{selected-invited-seminars}
+
+Gorzo, J.M. ``Career Perspective: From Wildlife to Data Science.''
+Stockton University (remote) 4/18/24\\
+Gorzo, J.M. ``Networks and Connectivity in Landscape Ecology''
+University of Minnesota-Duluth, 2020\\
+Gorzo, J.M. ``Introduction to Birding \& Community Science'' University
+of Wisconsin-Stevens Point, 2016
+
 \section{Outreach, Service \&
-Fundraising}\label{outreach-service-fundraising}}
+Fundraising}\label{outreach-service-fundraising}
 
 \begin{itemize}
 \tightlist
@@ -313,5 +339,5 @@ Fundraising}\label{outreach-service-fundraising}}
 \end{itemize}
 
 
-\label{LastPage}~
+
 \end{document}

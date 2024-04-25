@@ -10,10 +10,12 @@ github: dendroica
 linkedin: gorzo
 date: "`r format(Sys.time(), '%B %Y')`"
 output:
-  vitae::cv_document:
+  vitae::awesomecv:
+#    page_total: true
+#  vitae::cv_document:
     latex_engine: xelatex # Specify so it uses this instead of pdflatex
     keep_tex: TRUE # Keep tex file in-between runs
-    template: awesome-cv_mod.tex 
+#    template: mycv_public_mod.tex 
 csl: apa-single-spaced_mod.csl
 ---
 
@@ -28,7 +30,9 @@ library(vitae)
 library(tibble)
 tribble(
   ~ role, ~ company, ~ loc, ~ dates, ~ details,
-  "Data scientist", "Cellular Tracking Technologies", "Rio Grande, NJ", "Jul. 2020 - Present", 
+  "Research associate", "Conservation Science Global, Inc.", "Remote", "Mar. 2024 - Present",
+  list("Data wrangling and ecological analysis"),
+  "Data scientist", "Cellular Tracking Technologies LLC", "Rio Grande, NJ", "Jul. 2020 - Present", 
     list("Develop methodology to estimate locations from radio and Bluetooth signals from wildlife telemetry devices",
          "Manage data pipelines and processes that deliver and display data via web interfaces"
     ),
@@ -81,6 +85,12 @@ StellaR: http://www.r-gis.net/stellar/
 Updated code for Supplement 1. R Script in 2016 for the publication: Jackson, M. M., Turner, M. G., Pearson, S. M., & Ives, A. R. (2012). Seeing the forest and the trees: multilevel models reveal both species and community patterns. Ecosphere, 3(9), 1-16. https://figshare.com/articles/dataset/Supplement_1_R_script_and_input_data_file_for_creating_multilevel_models_using_the_forest_herb_data_set_described_in_the_main_text_/3563784?file=5637069
 
 Contributed “Raptors and songbirds” (8.4.5.1) pp.565-566 in Jodice, P. G. R., Tavano, J., Mackin, W., & Michel, J. (2013). South Atlantic information resources: data search and literature synthesis. US Department of the Interior, Bureau of Ocean Energy Management, regulation, and enforcement, Gulf of Mexico OCS region, 475, 587
+
+# Teaching
+## Selected Invited Seminars
+Gorzo, J.M. "Career Perspective: From Wildlife to Data Science." Stockton University (remote) 4/18/24  
+Gorzo, J.M. "Networks and Connectivity in Landscape Ecology" University of Minnesota-Duluth, 2020  
+Gorzo, J.M. "Introduction to Birding & Community Science" University of Wisconsin-Stevens Point, 2016  
 
 # Outreach, Service & Fundraising
 * Birding field guide (paid and volunteer) for various festivals (2015-2023)
