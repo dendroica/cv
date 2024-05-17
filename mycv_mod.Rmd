@@ -9,25 +9,26 @@ twitter: setophaga
 github: dendroica
 linkedin: gorzo
 date: "`r format(Sys.time(), '%B %Y')`"
-output:
-  vitae::awesomecv:
+output: (function (..., latex_engine = "xelatex") {; template <- ("awesome-cv_mod.tex"); vitae:::set_entry_formats(vitae:::awesome_cv_entries); vitae:::copy_supporting_files("awesomecv"); vitae::cv_document(..., template = template, latex_engine = latex_engine, keep_tex = TRUE)})
+ #MIGHT HAVE TO SPECIFY PATH TO TEMPLATE
+   # vitae::awesomecv:
 #    page_total: true
-#  vitae::cv_document:
-    latex_engine: xelatex # Specify so it uses this instead of pdflatex
-    keep_tex: TRUE # Keep tex file in-between runs
-#    template: mycv_public_mod.tex 
+  #vitae::cv_document:
+  #  latex_engine: xelatex # Specify so it uses this instead of pdflatex
+   # keep_tex: TRUE # Keep tex file in-between runs
+  #  template: awesome-cv_mod.tex 
 csl: apa-single-spaced_mod.csl
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(vitae)
+library(tibble)
 ```
 
 # Recent Experience
 
 ```{r consulting}
-library(tibble)
 tribble(
   ~ role, ~ company, ~ loc, ~ dates, ~ details,
   "Research associate", "Conservation Science Global, Inc.", "Remote", "Mar. 2024 - Present",
@@ -40,7 +41,8 @@ tribble(
     list("Data science consulting projects including spatio-temporal modeling", 
          "Create tools for improving workflows"),
   "Researcher", "Natural Resources Research Institute", "Duluth, MN", "Aug. 2016 - Jun. 2020", "Landscape Ecologist") %>% 
-  detailed_entries(role, dates, company, loc, details)
+  detailed_entries(role, dates, company, loc, details) #%>%
+   #knitr::knit_print()
 ```
 
 # Education
@@ -56,26 +58,22 @@ tribble(
 ```
 # Thesis & Dissertation
 ```{r}
-library(dplyr)
 bibliography_entries("mypubs.bib") %>% filter(type=="thesis")
 ```
 
 # Peer-Reviewed Publications
 
 ```{r}
-library(dplyr)
 bibliography_entries("mypubs.bib") %>% filter(type=="article-journal")
 ```
 
 # Conference Presentations
 ```{r}
-library(dplyr)
 bibliography_entries("mypubs.bib")  %>% filter(type=="paper-conference")
 ```
 
 # Technical Reports
 ```{r}
-library(dplyr)
 bibliography_entries("mypubs.bib")  %>% filter(type=="report")
 ```
 

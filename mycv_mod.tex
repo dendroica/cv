@@ -34,7 +34,7 @@
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
 
-\colorlet{awesome}{awesome-red}
+\colorlet{awesome}{awesome-emerald}
 
 % Colors for text
 % Uncomment if you would like to specify your own color
@@ -83,7 +83,7 @@
 
 
 
-% Pandoc CSL macros
+%% Pandoc CSL macros
 % definitions for citeproc citations
 \NewDocumentCommand\citeproctext{}{}
 \NewDocumentCommand\citeproc{mm}{%
@@ -117,6 +117,25 @@
 \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+%
+% Define a section for CV
+% Usage: \cvsection{<section-title>}
+
+\renewcommand{\section}[1]{%
+	\vspace{\acvSectionTopSkip}
+	\sectionstyle{#1}
+	\phantomsection
+	\color{gray}\vhrulefill{0.9pt}
+}
+
+% Define a subsection for CV
+% Usage: \cvsubsection{<subsection-title>}
+\renewcommand{\subsection}[1]{%
+	\vspace{\acvSectionContentTopSkip}
+	\vspace{-3mm}
+	\subsectionstyle{#1}
+	\phantomsection
+}
 
 \begin{document}
 
@@ -127,10 +146,6 @@
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 % 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
-\makecvfooter
-  {April 2024}
-    {Jessica Gorzo~~~·~~~Curriculum Vitae}
-  {\thepage}
 
 
 %-------------------------------------------------------------------------------
@@ -169,11 +184,11 @@
 
 \section{Thesis \& Dissertation}\label{thesis-dissertation}
 
-\phantomsection\label{refs-8828c09bf6a8cf10f1ef4c5ed69323d1}
+\phantomsection\label{refs-f367779abe3e8f51d322e48b3ae464cd}
 \begin{CSLReferences}{1}{0}
 \bibitem[\citeproctext]{ref-gorzo2016avian}
-Gorzo, J. M. (2016). \emph{Avian Response to Weather in the Central US
-Grasslands} {[}PhD thesis{]}. The University of Wisconsin-Madison.
+Gorzo, J. M. (2016). \emph{Avian response to weather in the central US
+grasslands} {[}PhD thesis{]}. The University of Wisconsin-Madison.
 
 \bibitem[\citeproctext]{ref-gorzo2012avian}
 Gorzo, J. M. (2012). \emph{Avian communities and landscape
