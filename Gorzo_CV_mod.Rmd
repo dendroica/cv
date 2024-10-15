@@ -37,15 +37,24 @@ tribble(
     list("Develop methodology to estimate locations from radio and Bluetooth signals from wildlife telemetry devices",
          "Manage data pipelines and processes that deliver and display data via web interfaces"
     ),
+  "Researcher", "Natural Resources Research Institute", "Duluth, MN", "Aug. 2016 - Jun. 2020", "Landscape Ecologist") %>% 
+  detailed_entries(role, dates, company, loc, details) #%>%
+   #knitr::knit_print()
+```
+
+## Contractor
+
+```{r consult}
+tribble(
+  ~ role, ~ company, ~ loc, ~ dates, ~ details,
+  
   "Marsh Bird Survey Technician", "New Jersey Dept. of Environmental Protection", "Tuckahoe, NJ", "Summer 2021, 2024", 
     list("Worked as a contractor to survey sensitive and endangered noctural avian species via boat transects", "Solely by-ear bird identification required for night surveys"
     ),
   "Co-Founder", "On the Wing Scientific Consulting LLC", "Remote", "Jul. 2018 - Present", 
     list("Data science consulting projects including spatio-temporal modeling", 
-         "Create tools for improving workflows"),
-  "Researcher", "Natural Resources Research Institute", "Duluth, MN", "Aug. 2016 - Jun. 2020", "Landscape Ecologist") %>% 
-  detailed_entries(role, dates, company, loc, details) #%>%
-   #knitr::knit_print()
+         "Create tools for improving workflows")) %>% 
+  detailed_entries(role, dates, company, loc, details)
 ```
 
 # Education
