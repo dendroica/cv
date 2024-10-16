@@ -3,7 +3,7 @@ name: Jessica
 surname: Gorzo
 position: "Data Scientist"
 pronouns: she/her
-address: "Cellular Tracking Technologies"
+address: "Cellular Tracking Technologies, Erma, NJ"
 www: avianecologist.com
 twitter: setophaga
 github: dendroica
@@ -11,10 +11,10 @@ linkedin: gorzo
 date: "`r format(Sys.time(), '%B %Y')`"
 output: #(function (..., latex_engine = "xelatex") {; template <- ("awesome-cv_mod.tex"); vitae:::set_entry_formats(vitae:::awesome_cv_entries); vitae:::copy_supporting_files("awesomecv"); vitae::cv_document(..., template = template, latex_engine = latex_engine, keep_tex = TRUE)})
  #MIGHT HAVE TO SPECIFY PATH TO TEMPLATE
-   vitae::awesomecv
+   vitae::awesomecv:
 #    page_total: true
   #vitae::cv_document:
-  #  latex_engine: xelatex # Specify so it uses this instead of pdflatex
+    latex_engine: xelatex # Specify so it uses this instead of pdflatex
    # keep_tex: TRUE # Keep tex file in-between runs
   #  template: awesome-cv_mod.tex 
 csl: apa-single-spaced_mod.csl
@@ -37,7 +37,7 @@ tribble(
     list("Develop methodology to estimate locations from radio and Bluetooth signals from wildlife telemetry devices",
          "Manage data pipelines and processes that deliver and display data via web interfaces"
     ),
-  "Researcher", "Natural Resources Research Institute", "Duluth, MN", "Aug. 2016 - Jun. 2020", "Landscape Ecologist") %>% 
+  "Researcher", "Natural Resources Research Institute - University of Minnesota", "Duluth, MN", "Aug. 2016 - Jun. 2020", "Landscape Ecologist") %>% 
   detailed_entries(role, dates, company, loc, details) #%>%
    #knitr::knit_print()
 ```
@@ -83,7 +83,6 @@ bibliography_entries("mypubs.bib") %>% filter(type=="article-journal")
 ```{r}
 bibliography_entries("mypubs.bib")  %>% filter(type=="paper-conference")
 ```
-
 # Technical Reports
 ```{r}
 bibliography_entries("mypubs.bib")  %>% filter(type=="report")
@@ -102,8 +101,17 @@ Gorzo, J.M. "Career Perspective: From Wildlife to Data Science." Stockton Univer
 Gorzo, J.M. "Networks and Connectivity in Landscape Ecology" University of Minnesota-Duluth, 2020  
 Gorzo, J.M. "Introduction to Birding & Community Science" University of Wisconsin-Stevens Point, 2016  
 
-```{r include=FALSE}
 # Outreach, Service & Fundraising
-#* Birding field guide (paid and volunteer) for various festivals (2015-2023)
-#* World Series of Birding: Participant in Carbon Footprint Challenge (2015, 2021)
+* Birding field guide (paid or volunteer) for various festivals (2015-2023)
+    * Cape May Fall Festival, Cape May Bird Observatory/NJ Audubon (2023-2024)
+    * Cape May Spring Festival, Cape May Bird Observatory/NJ Audubon (2024)
+    * Sax-Zim Bog Birding Festival (2014 - 2019)
+* World Series of Birding: Participant in Carbon Footprint Challenge
+    * 2015: tied for 1st
+    * 2021: 2nd place in social/physical distance COVID-19 modified rules
+* Great Wisconsin Birdathon Participant (2013, 2016)
+* BRRRRDathon (Team Overall Winner 2013)
+
+```{r include=FALSE}
+
 ```
