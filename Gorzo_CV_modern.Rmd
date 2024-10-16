@@ -9,13 +9,13 @@ twitter: setophaga
 github: dendroica
 linkedin: gorzo
 date: "`r format(Sys.time(), '%B %Y')`"
-output: #(function (..., latex_engine = "xelatex") {; template <- ("awesome-cv_mod.tex"); vitae:::set_entry_formats(vitae:::awesome_cv_entries); vitae:::copy_supporting_files("awesomecv"); vitae::cv_document(..., template = template, latex_engine = latex_engine, keep_tex = TRUE)})
+output: (function (..., latex_engine = "xelatex") {; template <- ("awesome-cv_mod.tex"); vitae:::set_entry_formats(vitae:::awesome_cv_entries); vitae:::copy_supporting_files("awesomecv"); vitae::cv_document(..., template = template, latex_engine = latex_engine, keep_tex = TRUE)})
  #MIGHT HAVE TO SPECIFY PATH TO TEMPLATE
-   vitae::awesomecv:
+  #vitae::awesomecv:
+  #  keep_tex: TRUE
 #    page_total: true
   #vitae::cv_document:
-    latex_engine: xelatex # Specify so it uses this instead of pdflatex
-  #  keep_tex: TRUE # Keep tex file in-between runs
+  #  latex_engine: xelatex # Specify so it uses this instead of pdflatex
   #  template: awesome-cv_mod.tex 
 csl: apa-single-spaced_mod.csl
 ---
@@ -119,7 +119,7 @@ Elderhostel: Astronomy, Mountain Lake VA (Fall 2007)
     * 2015: tied for 1st
     * 2021: 2nd place in social/physical distance COVID-19 modified rules
 * Great Wisconsin Birdathon Participant (2013, 2016)
-* BRRRRDathon (Team Overall Winner, Record Setter Jan. 2013)
+* BRRRRDathon (Team Overall Winner, Record Setter Jan. 2013)  
 
 ## Television  
 Expeditions – air date Oct 17 2010  
@@ -132,6 +132,10 @@ http://www.clemson.edu/public/expeditions/episode_guide/season_4.html )
 Your Day – air date Aug 30 2010  
 (Segment begins 45:50 http://cufan.clemson.edu/psaradiopod/YDPodcast/YD100830.mp3 )  
 
+## Academic
+**Ad hoc reviewer**: Journal of Arid Environments, Landscape & Urban Planning, Landscape Ecology, PLOS ONE, Wilson Ornithological Society, Biological Conservation, Avian Conservation & Ecology  
+**Professional Memberships**: Phi Kappa Phi Honors Society (inducted 2010), American Ornithological Society, US-International Association for Landscape Ecology
+
 # Awards & Honors  
 2015 Travel Award, American Ornithologist's Union/Cooper Ornithological Society Conference  
 2011 Outstanding Service to the Clemson Experimental Forest  
@@ -139,6 +143,7 @@ Dean’s List (undergraduate)
 
 # Certifications  
 Hunter’s Safety Certificate, Conservation Leaders of Tomorrow Workshop GA 2010  
+Certificate of Boating Safety Education, Maryland Department of Natural Resources  
 Coffee College, Virginia Tech  
 
 ```{r include=FALSE}
