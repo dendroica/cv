@@ -15,7 +15,7 @@ output: #(function (..., latex_engine = "xelatex") {; template <- ("awesome-cv_m
 #    page_total: true
   #vitae::cv_document:
     latex_engine: xelatex # Specify so it uses this instead of pdflatex
-   # keep_tex: TRUE # Keep tex file in-between runs
+  #  keep_tex: TRUE # Keep tex file in-between runs
   #  template: awesome-cv_mod.tex 
 csl: apa-single-spaced_mod.csl
 ---
@@ -97,12 +97,21 @@ Contributed “Raptors and songbirds” (8.4.5.1) pp.565-566 in Jodice, P. G. R.
 
 # Teaching
 ## Selected Invited Seminars
-Gorzo, J.M. "Career Perspective: From Wildlife to Data Science." Stockton University (remote) 4/18/24  
+Gorzo, J.M. "Career Perspective: From Wildlife to Data Science" Stockton University (remote) 4/18/24  
 Gorzo, J.M. "Networks and Connectivity in Landscape Ecology" University of Minnesota-Duluth, 2020  
 Gorzo, J.M. "Introduction to Birding & Community Science" University of Wisconsin-Stevens Point, 2016  
 
+## Teaching Assistant  
+
+Forestry Practicum ("Summer Camp"), Kemp Natural Resource Station (2012, 2014)  
+Introduction to Astronomy Lab (2 Sections) Virginia Tech (2008)  
+
+## Short Course & Workshop Instructor    
+BIOSC 730: Wolves and Society, Clemson University (2013)  
+Elderhostel: Astronomy, Mountain Lake VA (Fall 2007)
+
 # Outreach, Service & Fundraising
-* Birding field guide (paid or volunteer) for various festivals (2015-2023)
+* Birding field guide (paid or volunteer) for various festivals
     * Cape May Fall Festival, Cape May Bird Observatory/NJ Audubon (2023-2024)
     * Cape May Spring Festival, Cape May Bird Observatory/NJ Audubon (2024)
     * Sax-Zim Bog Birding Festival (2014 - 2019)
@@ -110,7 +119,27 @@ Gorzo, J.M. "Introduction to Birding & Community Science" University of Wisconsi
     * 2015: tied for 1st
     * 2021: 2nd place in social/physical distance COVID-19 modified rules
 * Great Wisconsin Birdathon Participant (2013, 2016)
-* BRRRRDathon (Team Overall Winner 2013)
+* BRRRRDathon (Team Overall Winner, Record Setter Jan. 2013)
+
+## Television  
+Expeditions – air date Oct 17 2010  
+Guest appearance, season 4, Episode 7: “The ACE Basin – A Conservation Miracle”  
+Discussed painted bunting habitat requirements, threats and conservation needs  
+(Listing and TV show description:  
+http://www.clemson.edu/public/expeditions/episode_guide/season_4.html )  
+
+## Radio
+Your Day – air date Aug 30 2010  
+(Segment begins 45:50 http://cufan.clemson.edu/psaradiopod/YDPodcast/YD100830.mp3 )  
+
+# Awards & Honors  
+2015 Travel Award, American Ornithologist's Union/Cooper Ornithological Society Conference  
+2011 Outstanding Service to the Clemson Experimental Forest  
+Dean’s List (undergraduate)  
+
+# Certifications  
+Hunter’s Safety Certificate, Conservation Leaders of Tomorrow Workshop GA 2010  
+Coffee College, Virginia Tech  
 
 ```{r include=FALSE}
 
