@@ -1,0 +1,166 @@
+---
+name: Jessica
+surname: Gorzo
+position: "Research Associate"
+pronouns: she/her
+address: "Cellular Tracking Technologies, Erma, NJ"
+www: avianecologist.com
+twitter: setophaga
+github: dendroica
+linkedin: gorzo
+date: "`r format(Sys.time(), '%B %Y')`"
+output: #(function (..., theme = "banking", latex_engine = "xelatex") {; theme <- match.arg(theme); template <- ("moderncv-mod.tex"); vitae:::set_entry_formats(vitae:::moderncv_cv_entries); vitae:::copy_supporting_files("moderncv"); vitae::cv_document(..., pandoc_vars = list(theme = theme), template = template, latex_engine = latex_engine, keep_tex = TRUE)})
+  #vitae::moderncv:
+   # theme: banking
+    #keep_tex: TRUE
+    #page_total: true
+  vitae::cv_document:
+   # latex_engine: xelatex # can't use for latexcv
+    template: moderncv.tex 
+csl: apa-single-spaced_mod.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+```
+
+# Recent Experience
+
+```{r consulting}
+tribble(
+  ~ role, ~ company, ~ loc, ~ dates, ~ details,
+  "Research associate", "Conservation Science Global, Inc.", "Remote", "Mar. 2024 - Present",
+  list("Data wrangling and ecological analysis", "Working on a variety of projects to complete grant goals and produce deliverables"),
+  "Data scientist", "Cellular Tracking Technologies LLC", "Rio Grande, NJ", "Jul. 2020 - Present", 
+    list("Develop methodology to estimate locations from radio and Bluetooth signals",
+         "Manage data pipelines and processes that deliver and display data via web interfaces"
+    ),
+  "Landscape Ecologist", "Natural Resources Research Institute", "Duluth, MN", "Aug. 2016 - Jun. 2020", "Researcher 5 (University of Minnesota - NRRI internal job title designation)") %>% 
+  detailed_entries(role, dates, company, loc, details) #%>%
+   #knitr::knit_print()
+```
+
+## Contractor
+
+```{r consult}
+tribble(
+  ~ role, ~ company, ~ loc, ~ dates, ~ details,
+  
+  "Marsh Bird Survey Technician", "New Jersey Dept. of Environmental Protection", "Tuckahoe, NJ", "Summer 2021, 2024", 
+    list("Worked as a contractor to survey sensitive and endangered noctural avian species via boat transects", "Solely by-ear bird identification required for night surveys"
+    ),
+  "Co-Founder", "On the Wing Scientific Consulting LLC", "Remote", "Jul. 2018 - Present", 
+    list("Data science consulting projects including spatio-temporal modeling", 
+         "Create tools for improving workflows")) %>% 
+  detailed_entries(role, dates, company, loc, details)
+```
+
+# Education
+
+```{r}
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~details,
+  "B.S. Biological Sciences", "2004-08", "Virginia Tech", "Blacksburg, VA", "Minors: Physics, Astronomy",
+  "M.S. Wildlife & Fisheries Biology", "2009-11", "Clemson University", "Clemson, SC", "Minor: Experimental Statistics",
+  "Ph.D. Wildlife Ecology", "2012-16", "University of Wisconsin", "Madison, WI", "Minor: distributed (required)"
+) %>%
+  detailed_entries(Degree, Year, Institution, Where, details)
+```
+# Thesis & Dissertation
+```{r}
+bibliography_entries("mypubs.bib") %>% filter(type=="thesis")
+```
+
+# Peer-Reviewed Publications
+
+```{r}
+bibliography_entries("mypubs.bib") %>% filter(type=="article-journal")
+```
+
+# Conference Presentations
+```{r}
+bibliography_entries("mypubs.bib")  %>% filter(type=="paper-conference")
+```
+# Technical Reports
+```{r}
+bibliography_entries("mypubs.bib")  %>% filter(type=="report")
+```
+
+# Contributions  
+* StellaR: http://www.r-gis.net/stellar/
+
+* Updated code for Supplement 1. R Script in 2016 for the publication: Jackson, M. M., Turner, M. G., Pearson, S. M., & Ives, A. R. (2012). Seeing the forest and the trees: multilevel models reveal both species and community patterns. Ecosphere, 3(9), 1-16. https://figshare.com/articles/dataset/Supplement_1_R_script_and_input_data_file_for_creating_multilevel_models_using_the_forest_herb_data_set_described_in_the_main_text_/3563784?file=5637069
+
+* Contributed “Raptors and songbirds” (8.4.5.1) pp.565-566 in Jodice, P. G. R., Tavano, J., Mackin, W., & Michel, J. (2013). South Atlantic information resources: data search and literature synthesis. US Department of the Interior, Bureau of Ocean Energy Management, regulation, and enforcement, Gulf of Mexico OCS region, 475, 587
+
+# Teaching
+## Guest Lectures
+```{r}
+tribble(
+  ~ what, ~ when, ~ with, ~where,
+  "Career Perspective: From Wildlife to Data Science", "4/18/2024", "DSSA 5102: Data Gathering & Warehousing", "Stockton University",
+  "Networks and Connectivity in Landscape Ecology", "2020", "Landscape Ecology","University of Minnesota-Duluth",
+  "Introduction to Birding and Community Science", "2016", "WLDL 450/650: Human Dimensions in Wildlife","University of Wisconsin-Stevens Point"
+) %>%
+  detailed_entries(what, when, with, where, .protect = TRUE)
+```
+
+## Teaching Assistant  
+```{r}
+tribble(
+  ~ what, ~when, ~with,
+  "Forestry Practicum ('Summer Camp')", "2012, 2014", " Kemp Natural Resource Station",
+  "Introduction to Astronomy Lab (2 Sections)", "2008", "Virginia Tech"
+) %>%
+  brief_entries(what, when, with)
+```
+
+## Short Course & Workshop Instructor  
+```{r}
+tribble(
+  ~ what, ~when, ~with,
+  "BIOSC 730: Wolves and Society", "2013", "Clemson University",
+  "Introduction to Astronomy", "Fall 2007", "Elderhostel"
+) %>%
+  brief_entries(what, when, with)
+```
+
+# Outreach, Service & Fundraising
+* Birding field guide (paid or volunteer) for various festivals
+    * Cape May Fall Festival, Cape May Bird Observatory/NJ Audubon (2023-2024)
+    * Cape May Spring Festival, Cape May Bird Observatory/NJ Audubon (2024)
+    * Sax-Zim Bog Birding Festival (2014 - 2019)
+* World Series of Birding: Participant in Carbon Footprint Challenge
+    * 2015: tied for 1st
+    * 2021: 2nd place in social/physical distance COVID-19 modified rules
+* Great Wisconsin Birdathon Participant (2013, 2016)
+* BRRRRDathon (Team Overall Winner, Record Setter Jan. 2013)  
+
+## Television  
+Expeditions – air date Oct 17 2010  
+Guest appearance, season 4, Episode 7: “The ACE Basin – A Conservation Miracle”  
+Discussed painted bunting habitat requirements, threats and conservation needs  
+(Listing and TV show description:  
+http://www.clemson.edu/public/expeditions/episode_guide/season_4.html )  
+
+## Radio
+Your Day – air date Aug 30 2010  
+(Segment start 45:50 http://cufan.clemson.edu/psaradiopod/YDPodcast/YD100830.mp3 )  
+
+## Academic
+**Ad hoc reviewer**: Journal of Arid Environments, Landscape & Urban Planning, Landscape Ecology, PLOS ONE, Wilson Ornithological Society, Biological Conservation, Avian Conservation & Ecology  
+**Professional Memberships**: Phi Kappa Phi Honors Society (inducted 2010), American Ornithological Society, US-International Association for Landscape Ecology
+
+# Awards & Honors  
+2015 Travel Award, American Ornithologist's Union/Cooper Ornithological Society Conference  
+2011 Outstanding Service to the Clemson Experimental Forest  
+Dean’s List (undergraduate)  
+
+```{r include=FALSE}
+# Certifications  
+#Hunter’s Safety Certificate, Conservation Leaders of Tomorrow Workshop GA 2010  
+#Certificate of Boating Safety Education, Maryland Department of Natural Resources  
+#Coffee College, Virginia Tech  
+```

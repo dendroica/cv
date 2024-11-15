@@ -1,0 +1,409 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 8 February 2019
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,]{moderncv}
+
+% moderncv themes
+\moderncvstyle{banking}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+
+\definecolor{color0}{rgb}{0,0,0}% black
+\definecolor{color1}{HTML}{3873B3}% custom
+\definecolor{color2}{rgb}{0.45,0.45,0.45}% dark grey
+
+\usepackage[scaled=0.86]{DejaVuSansMono}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\def\donothing#1{#1}
+\def\emaillink#1{#1}
+
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75,left=13mm, right=13mm,top=13mm, bottom=13mm,footskip=60pt]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+
+
+% personal data
+\name{Jessica}{Gorzo}
+\title{Research Associate}
+\address{Cellular Tracking Technologies, Erma, NJ}{}{}
+\pronouns{she/her}{}{}
+ % Phone number
+
+\homepage{avianecologist.com} % Personal website
+\social[linkedin]{gorzo}
+\social[twitter]{setophaga}
+\social[github]{dendroica}
+
+
+
+
+% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+
+
+
+
+% Pandoc CSL macros
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\vspace*{-2\baselineskip}
+
+\section{Recent Experience}\label{recent-experience}
+
+\nopagebreak
+    \cventry{Mar. 2024 - Present}{Research associate}{Conservation Science Global, Inc.}{Remote}{}{\begin{itemize}%
+\item Data wrangling and ecological analysis%
+\item Working on a variety of projects to complete grant goals and produce deliverables%
+\end{itemize}}
+    \cventry{Jul. 2020 - Present}{Data scientist}{Cellular Tracking Technologies LLC}{Rio Grande, NJ}{}{\begin{itemize}%
+\item Develop methodology to estimate locations from radio and Bluetooth signals%
+\item Manage data pipelines and processes that deliver and display data via web interfaces%
+\end{itemize}}
+    \cventry{Aug. 2016 - Jun. 2020}{Landscape Ecologist}{Natural Resources Research Institute}{Duluth, MN}{}{\begin{itemize}%
+\item Researcher 5 (University of Minnesota - NRRI internal job title designation)%
+\end{itemize}}
+
+\subsection{Contractor}\label{contractor}
+
+\nopagebreak
+    \cventry{Summer 2021, 2024}{Marsh Bird Survey Technician}{New Jersey Dept. of Environmental Protection}{Tuckahoe, NJ}{}{\begin{itemize}%
+\item Worked as a contractor to survey sensitive and endangered noctural avian species via boat transects%
+\item Solely by-ear bird identification required for night surveys%
+\end{itemize}}
+    \cventry{Jul. 2018 - Present}{Co-Founder}{On the Wing Scientific Consulting LLC}{Remote}{}{\begin{itemize}%
+\item Data science consulting projects including spatio-temporal modeling%
+\item Create tools for improving workflows%
+\end{itemize}}
+
+\section{Education}\label{education}
+
+\nopagebreak
+    \cventry{2004-08}{B.S. Biological Sciences}{Virginia Tech}{Blacksburg, VA}{}{\begin{itemize}%
+\item Minors: Physics, Astronomy%
+\end{itemize}}
+    \cventry{2009-11}{M.S. Wildlife \& Fisheries Biology}{Clemson University}{Clemson, SC}{}{\begin{itemize}%
+\item Minor: Experimental Statistics%
+\end{itemize}}
+    \cventry{2012-16}{Ph.D. Wildlife Ecology}{University of Wisconsin}{Madison, WI}{}{\begin{itemize}%
+\item Minor: distributed (required)%
+\end{itemize}}
+
+\section{Thesis \& Dissertation}\label{thesis-dissertation}
+
+\phantomsection\label{refs-f367779abe3e8f51d322e48b3ae464cd}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-gorzo2016avian}
+Gorzo, J. M. (2016). \emph{Avian response to weather in the central US
+grasslands} {[}PhD thesis{]}. The University of Wisconsin-Madison.
+
+\bibitem[\citeproctext]{ref-gorzo2012avian}
+Gorzo, J. M. (2012). \emph{Avian communities and landscape
+characteristics of golf courses within the Beaufort County sea island
+complex} {[}Master's thesis{]}. Clemson University.
+
+\end{CSLReferences}
+
+\section{Peer-Reviewed Publications}\label{peer-reviewed-publications}
+
+\phantomsection\label{refs-ac9b1bd4beeebee61ed7fb33c33f685f}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-gorzo2016using}
+Gorzo, J. M., Pidgeon, A. M., Thogmartin, W. E., Allstadt, A. J.,
+Radeloff, V. C., Heglund, P. J., \& Vavrus, S. J. (2016). Using the
+North American Breeding Bird Survey to assess broad-scale response of
+the continent's most imperiled avian community, grassland birds, to
+weather variability. \emph{The Condor: Ornithological Applications},
+\emph{118}(3), 502--512.
+
+\bibitem[\citeproctext]{ref-schilke2020modeling}
+Schilke, P. R., Bartrons, M., Gorzo, J. M., Vander Zanden, M. J.,
+Gratton, C., Howe, R. W., \& Pidgeon, A. M. (2020). Modeling a
+cross-ecosystem subsidy: Forest songbird response to emergent aquatic
+insects. \emph{Landscape Ecology}, \emph{35}, 1587--1604.
+
+\bibitem[\citeproctext]{ref-mcintyre2019simulating}
+McIntyre, N., Liu, G., Gorzo, J. M., Wright, C. K., Guntenspergen, G.
+R., \& Schwartz, F. (2019). Simulating the effects of climate
+variability on waterbodies and wetland-dependent birds in the Prairie
+Pothole Region. \emph{Ecosphere}, \emph{10}(4), e02711.
+
+\bibitem[\citeproctext]{ref-hamilton2018slow}
+Hamilton, C. M., Bateman, B. L., Gorzo, J. M., Reid, B., Thogmartin, W.
+E., Peery, M. Z., Heglund, P. J., Radeloff, V. C., \& Pidgeon, A. M.
+(2018). Slow and steady wins the race? Future climate and land use
+change leaves the imperiled Blanding's turtle (Emydoidea blandingii)
+behind. \emph{Biological Conservation}, \emph{222}, 75--85.
+
+\bibitem[\citeproctext]{ref-latimer2022rising}
+Latimer, C. E., Graves, R., Pidgeon, A. M., Gorzo, J. M., Henschell, M.
+M., Schilke, P. R., Hobi, M. L., Olah, A., Kennedy, C. M., Zuckerberg,
+B., et al. (2022). Rising novelty and homogenization of breeding bird
+communities in the US. \emph{bioRxiv}, 2022--2009.
+
+\bibitem[\citeproctext]{ref-simonetti2008minor}
+Simonetti, J., Chou, A., Dowd, J., Gorzo, J., Grimm, C., Harold, M.,
+Hubbard, R., Kuether, T., Loyd, R., Nipper, B., et al. (2008). Minor
+Planet Observations {[}841 Martin Observatory, Blacksburg{]}.
+\emph{Minor Planet Circulars}, \emph{62871}, 9.
+
+\end{CSLReferences}
+
+\section{Conference Presentations}\label{conference-presentations}
+
+\phantomsection\label{refs-c9a32b88bbdb94f2a9a10d4107dff1d8}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-aos}
+Gorzo, J. M., \& Burcher, S. (2024). Automated radio telemetry: Study
+design and data analysis. \emph{Meeting of the American Ornithological
+Society}.
+
+\bibitem[\citeproctext]{ref-bls8}
+Burcher, S., Blackshire, S., Gorzo, J., Lanzone, M., La Puma, D., \&
+Mizrahi, D. (2024a). Tracking wildlife movements with networks of fixed
+radio receivers. \emph{8th International Bio-Logging Science Symposium}.
+
+\bibitem[\citeproctext]{ref-aostalk}
+Burcher, S., Blackshire, S., Gorzo, J., Lanzone, M., La Puma, D., \&
+Mizrahi, D. (2024b). Tracking wildlife movements with networks of fixed
+radio receivers. \emph{Meeting of the American Ornithological Society}.
+
+\bibitem[\citeproctext]{ref-jess2018mallard}
+Gorzo, J. M., \& Wright, C. K. (2018). Mallard Distribution and Wetland
+Network Modularity in the Prairie Pothole Region (PPR). \emph{IALE-NA},
+\emph{T02}, Terrestrial--aquatic ecosystem interactions.
+
+\bibitem[\citeproctext]{ref-tag}
+Gorzo, J. M. (2017). Waterfowl response to weather and land cover in the
+prairie potholes. \emph{Proceedings of the Ninety-Eighth Annual
+Meeting}, 922. \url{https://doi.org/10.1676/1559-4491-129.4.911}
+
+\bibitem[\citeproctext]{ref-tag2}
+Gorzo, J. M., Pidgeon, A., Allstadt, A., Thogmartin, W., Vavrus, S., \&
+Heglund, P. (2016). Land cover and weather drivers of avian site
+fidelity. \emph{Proceedings of the Society for Conservation Biology}.
+
+\bibitem[\citeproctext]{ref-wright2018mallard}
+Wright, C. K., \& Gorzo, J. M. (2018). For mallard ducks, the network is
+the habitat. \emph{AGU Fall Meeting Abstracts}, \emph{2018}, H21L--1826.
+
+\bibitem[\citeproctext]{ref-aou}
+Gorzo, J. M., Pidgeon, A. M., Thogmartin, W., Allstadt, A., \& Radeloff,
+V. (2015). Grassland bird response to weather in the badlands and
+prairies. \emph{Meeting of the American Ornithologists' Union/Cooper
+Society}.
+
+\bibitem[\citeproctext]{ref-earth}
+Gorzo, J. M. (2014). Avian population response to extreme weather
+events. \emph{Nelson Earth Day Conference}.
+
+\bibitem[\citeproctext]{ref-aoufl}
+Gorzo, J. M., \& Jodice, P. G. R. (2011). The breeding bird community of
+coastal golf courses in Beaufort County, South Carolina. \emph{Meeting
+of the American Ornithologists' Union}.
+
+\bibitem[\citeproctext]{ref-wos}
+Bateman, B., Gorzo, J. M., Pidgeon, A., Radeloff, V., Akcakaya, R.,
+Flather, C., Albright, T., Vavrus, S., Thogmartin, W., \& Heglund, P.
+(2013). Use of multiple data sources in identifying drivers of abundance
+in an irruptive species, the dickcissel. \emph{Meeting of the American
+Ornithologists' Union/Cooper Ornithological Society}.
+
+\bibitem[\citeproctext]{ref-allstadt2016effects}
+Allstadt, A. J., Gorzo, J. M., Bateman, B. L., Heglund, P. J., Pidgeon,
+A. M., Thogmartin, W., Vavrus, S. J., \& Radeloff, V. (2016). Effects of
+weather on the abundance and distribution on populations of 103 breeding
+bird species across the United States. \emph{AGU Fall Meeting
+Abstracts}, \emph{2016}, GC11D--1181.
+
+\end{CSLReferences}
+
+\section{Technical Reports}\label{technical-reports}
+
+\phantomsection\label{refs-972c61dc0a31e77772ca1bd1a185967e}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-noe2021measuring}
+Noe, R., Locke, C., Host, G., Gorzo, J., Johnson, L., Lonsdorf, E.,
+Grinde, A., Joyce, M., Bednar, J., Dumke, J., et al. (2021).
+\emph{Measuring what matters: Assessing the full suite of benefits of
+OHF investments}.
+
+\bibitem[\citeproctext]{ref-CitekeyTechreport}
+Johnson-Bice, S., Gorzo, J. M., Kovalenko, K., Brown, T., \& Host, G.
+(2020). \emph{Predicting Potential Beaver Dam Sites on Lake Superior's
+North Shore}. Natural Resources Research Institute.
+
+\end{CSLReferences}
+
+\section{Contributions}\label{contributions}
+
+\begin{itemize}
+\item
+  StellaR: \url{http://www.r-gis.net/stellar/}
+\item
+  Updated code for Supplement 1. R Script in 2016 for the publication:
+  Jackson, M. M., Turner, M. G., Pearson, S. M., \& Ives, A. R. (2012).
+  Seeing the forest and the trees: multilevel models reveal both species
+  and community patterns. Ecosphere, 3(9), 1-16.
+  \url{https://figshare.com/articles/dataset/Supplement_1_R_script_and_input_data_file_for_creating_multilevel_models_using_the_forest_herb_data_set_described_in_the_main_text_/3563784?file=5637069}
+\item
+  Contributed ``Raptors and songbirds'' (8.4.5.1) pp.565-566 in Jodice,
+  P. G. R., Tavano, J., Mackin, W., \& Michel, J. (2013). South Atlantic
+  information resources: data search and literature synthesis. US
+  Department of the Interior, Bureau of Ocean Energy Management,
+  regulation, and enforcement, Gulf of Mexico OCS region, 475, 587
+\end{itemize}
+
+\section{Teaching}\label{teaching}
+
+\subsection{Guest Lectures}\label{guest-lectures}
+
+\nopagebreak
+    \cventry{4/18/2024}{Career Perspective: From Wildlife to Data Science}{DSSA 5102: Data Gathering \& Warehousing}{Stockton University}{}{\empty}
+    \cventry{2020}{Networks and Connectivity in Landscape Ecology}{Landscape Ecology}{University of Minnesota-Duluth}{}{\empty}
+    \cventry{2016}{Introduction to Birding and Community Science}{WLDL 450/650: Human Dimensions in Wildlife}{University of Wisconsin-Stevens Point}{}{\empty}
+
+\subsection{Teaching Assistant}\label{teaching-assistant}
+
+\nopagebreak
+    \cvitem{2012, 2014}{Forestry Practicum ('Summer Camp').  Kemp Natural Resource Station}
+    \cvitem{2008}{Introduction to Astronomy Lab (2 Sections). Virginia Tech}
+
+\subsection{Short Course \& Workshop
+Instructor}\label{short-course-workshop-instructor}
+
+\nopagebreak
+    \cvitem{2013}{BIOSC 730: Wolves and Society. Clemson University}
+    \cvitem{Fall 2007}{Introduction to Astronomy. Elderhostel}
+
+\section{Outreach, Service \&
+Fundraising}\label{outreach-service-fundraising}
+
+\begin{itemize}
+\tightlist
+\item
+  Birding field guide (paid or volunteer) for various festivals
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Cape May Fall Festival, Cape May Bird Observatory/NJ Audubon
+    (2023-2024)
+  \item
+    Cape May Spring Festival, Cape May Bird Observatory/NJ Audubon
+    (2024)
+  \item
+    Sax-Zim Bog Birding Festival (2014 - 2019)
+  \end{itemize}
+\item
+  World Series of Birding: Participant in Carbon Footprint Challenge
+
+  \begin{itemize}
+  \tightlist
+  \item
+    2015: tied for 1st
+  \item
+    2021: 2nd place in social/physical distance COVID-19 modified rules
+  \end{itemize}
+\item
+  Great Wisconsin Birdathon Participant (2013, 2016)
+\item
+  BRRRRDathon (Team Overall Winner, Record Setter Jan.~2013)
+\end{itemize}
+
+\subsection{Television}\label{television}
+
+Expeditions -- air date Oct 17 2010\\
+Guest appearance, season 4, Episode 7: ``The ACE Basin -- A Conservation
+Miracle''\\
+Discussed painted bunting habitat requirements, threats and conservation
+needs\\
+(Listing and TV show description:\\
+\url{http://www.clemson.edu/public/expeditions/episode_guide/season_4.html}
+)
+
+\subsection{Radio}\label{radio}
+
+Your Day -- air date Aug 30 2010\\
+(Segment start 45:50
+\url{http://cufan.clemson.edu/psaradiopod/YDPodcast/YD100830.mp3} )
+
+\subsection{Academic}\label{academic}
+
+\textbf{Ad hoc reviewer}: Journal of Arid Environments, Landscape \&
+Urban Planning, Landscape Ecology, PLOS ONE, Wilson Ornithological
+Society, Biological Conservation, Avian Conservation \& Ecology\\
+\textbf{Professional Memberships}: Phi Kappa Phi Honors Society
+(inducted 2010), American Ornithological Society, US-International
+Association for Landscape Ecology
+
+\section{Awards \& Honors}\label{awards-honors}
+
+2015 Travel Award, American Ornithologist's Union/Cooper Ornithological
+Society Conference\\
+2011 Outstanding Service to the Clemson Experimental Forest\\
+Dean's List (undergraduate)
+
+
+\end{document}
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.
