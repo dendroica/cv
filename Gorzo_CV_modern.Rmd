@@ -9,8 +9,11 @@ twitter: setophaga
 github: dendroica
 linkedin: gorzo
 date: "`r format(Sys.time(), '%B %Y')`"
-output: (function (..., latex_engine = "xelatex") {; template <- here::here("awesome-cv_mod.tex"); vitae:::set_entry_formats(vitae:::awesome_cv_entries); vitae:::copy_supporting_files("awesomecv"); vitae::cv_document(..., template = template, latex_engine = latex_engine, keep_tex = TRUE)})
- #MIGHT HAVE TO SPECIFY PATH TO TEMPLATE
+output: (function (..., latex_engine = "xelatex") {; template <- here::here("awesome-cv_mod_leg.tex"); vitae:::set_entry_formats(vitae:::awesome_cv_entries); vitae:::copy_supporting_files("awesomecv"); vitae::cv_document(..., template = template, latex_engine = latex_engine, keep_tex = TRUE)})
+
+#look to "awesome-cv_mod_leg.tex" for modified spacing etc
+ 
+   #MIGHT HAVE TO SPECIFY PATH TO TEMPLATE
   #vitae::awesomecv:
   #  keep_tex: TRUE
 #    page_total: true
@@ -31,9 +34,11 @@ library(tibble)
 ```{r consulting}
 tribble(
   ~ role, ~ company, ~ loc, ~ dates, ~ details,
-  "Research associate", "Conservation Science Global, Inc.", "Remote", "Mar. 2024 - Present",
+  "Research scientist", "New Jersey Department of Environmental Protection", "Port Republic, NJ", "Jan. 2025 - Present",
+  list("Fisheries stock assessment", "Marine Bureau"),
+  "Research associate", "Conservation Science Global, Inc.", "Remote", "Mar. 2024 - Dec. 2024",
   list("Data wrangling and ecological analysis", "Working on a variety of projects to complete grant goals and produce required deliverables"),
-  "Data scientist", "Cellular Tracking Technologies LLC", "Rio Grande, NJ", "Jul. 2020 - Present", 
+  "Data scientist", "Cellular Tracking Technologies LLC", "Rio Grande, NJ", "Jul. 2020 - Dec. 2024", 
     list("Develop methodology to estimate locations from radio and Bluetooth signals from wildlife telemetry devices",
          "Manage data pipelines and processes that deliver and display data via web interfaces"
     ),

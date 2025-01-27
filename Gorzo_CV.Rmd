@@ -9,14 +9,14 @@ twitter: setophaga
 github: dendroica
 linkedin: gorzo
 date: "`r format(Sys.time(), '%B %Y')`"
-output: #(function (..., theme = "banking", latex_engine = "xelatex") {; theme <- match.arg(theme); template <- ("moderncv-mod.tex"); vitae:::set_entry_formats(vitae:::moderncv_cv_entries); vitae:::copy_supporting_files("moderncv"); vitae::cv_document(..., pandoc_vars = list(theme = theme), template = template, latex_engine = latex_engine, keep_tex = TRUE)})
-  #vitae::moderncv:
+output: (function (..., theme = "banking", latex_engine = "xelatex") {; theme <- match.arg(theme); template <- ("Gorzo_CVmod.tex"); vitae:::set_entry_formats(vitae:::moderncv_cv_entries); vitae:::copy_supporting_files("moderncv"); vitae::cv_document(..., pandoc_vars = list(theme = theme), template = template, latex_engine = latex_engine, keep_tex = TRUE)})
+  #vitae::awesomecv
    # theme: banking
-    #keep_tex: TRUE
-    #page_total: true
-  vitae::cv_document:
+  #  keep_tex: TRUE
+    #page_total: FALSE
+  #vitae::cv_document:
    # latex_engine: xelatex # can't use for latexcv
-    template: moderncv.tex 
+   # template: moderncv.tex 
 csl: apa-single-spaced_mod.csl
 ---
 
