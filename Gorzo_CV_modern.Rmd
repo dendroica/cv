@@ -1,15 +1,15 @@
 ---
 name: Jessica
 surname: Gorzo
-position: "Data Scientist"
+position: "Ecologist"
 pronouns: she/her
-address: "Cellular Tracking Technologies, Erma, NJ"
+address: "NJDEP Fish & Wildlife, Port Republic, NJ"
 www: avianecologist.com
-twitter: setophaga
+#twitter: setophaga
 github: dendroica
 linkedin: gorzo
 date: "`r format(Sys.time(), '%B %Y')`"
-output: (function (..., latex_engine = "xelatex") {; template <- here::here("awesome-cv_mod_leg.tex"); vitae:::set_entry_formats(vitae:::awesome_cv_entries); vitae:::copy_supporting_files("awesomecv"); vitae::cv_document(..., template = template, latex_engine = latex_engine, keep_tex = TRUE)})
+output: (function (..., latex_engine = "xelatex") {; template <- here::here("awesome-cvmod.tex"); vitae:::set_entry_formats(vitae:::awesome_cv_entries); vitae:::copy_supporting_files("awesomecv"); vitae::cv_document(..., template = template, latex_engine = latex_engine, keep_tex = TRUE)})
 
 #look to "awesome-cv_mod_leg.tex" for modified spacing etc
  
@@ -34,7 +34,7 @@ library(tibble)
 ```{r consulting}
 tribble(
   ~ role, ~ company, ~ loc, ~ dates, ~ details,
-  "Research scientist", "New Jersey Department of Environmental Protection", "Port Republic, NJ", "Jan. 2025 - Present",
+  "Research scientist", "New Jersey Dept. of Environmental Protection", "Port Republic, NJ", "Jan. 2025 - Present",
   list("Fisheries stock assessment", "Marine Bureau"),
   "Research associate", "Conservation Science Global, Inc.", "Remote", "Mar. 2024 - Dec. 2024",
   list("Data wrangling and ecological analysis", "Working on a variety of projects to complete grant goals and produce required deliverables"),
@@ -42,7 +42,7 @@ tribble(
     list("Develop methodology to estimate locations from radio and Bluetooth signals from wildlife telemetry devices",
          "Manage data pipelines and processes that deliver and display data via web interfaces"
     ),
-  "Researcher", "Natural Resources Research Institute - University of Minnesota", "Duluth, MN", "Aug. 2016 - Jun. 2020", "Landscape Ecologist") %>% 
+  "Researcher", "Natural Resources Research Institute - University of Minnesota", "Duluth, MN", "Aug. 2016 - Jun. 2020", list("Landscape Ecologist", "NSF Macrosystems Grant postdoc")) %>% 
   detailed_entries(role, dates, company, loc, details) #%>%
    #knitr::knit_print()
 ```
@@ -146,11 +146,9 @@ Your Day – air date Aug 30 2010
 2011 Outstanding Service to the Clemson Experimental Forest  
 Dean’s List (undergraduate)  
 
-# Certifications  
-Hunter’s Safety Certificate, Conservation Leaders of Tomorrow Workshop GA 2010  
-Certificate of Boating Safety Education, Maryland Department of Natural Resources  
-Coffee College, Virginia Tech  
-
 ```{r include=FALSE}
-
+# Certifications  
+#Hunter’s Safety Certificate, Conservation Leaders of Tomorrow Workshop GA 2010  
+#Certificate of Boating Safety Education, Maryland Department of Natural Resources  
+#Coffee College, Virginia Tech  
 ```
